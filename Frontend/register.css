@@ -1,0 +1,81 @@
+body {
+  background-color: #181818;
+  font-family: Tahoma, sans-serif;
+}
+
+/* 1. Restyled Navbar with CSS3 Linear Gradient */
+.reg-nav {
+  background: linear-gradient(90deg, #ffff00, #ffbb00);
+  padding: 12px;
+  text-align: center;
+}
+
+/* 2. Child Combinator (>) */
+.reg-nav > a {
+  color: #1d1d1d;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 14px;
+}
+
+.reg-form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Adjacent Sibling Combinator (+) */
+h2 + p {
+  color: #555555;
+  font-style: italic;
+}
+
+/* 4. Pseudo-elements (::before and ::after) */
+.form-heading::before {
+  content: "⚡ ";
+}
+
+label::after {
+  content: " :";
+  font-weight: bold;
+}
+
+/* 5. Attribute Selectors */
+input[type="email"],
+input[type="password"] {
+  background-color: #fffef0;
+}
+
+input[readonly] {
+  background-color: #e9ecef;
+  border: 1px dashed #666666;
+}
+
+/* 6. Pseudo-classes (:focus, :valid, :invalid, :hover) */
+input:focus,
+textarea:focus {
+  border: 2px solid #1d1d1d;
+  box-shadow: 0 0 6px rgba(255, 255, 0, 0.8);
+}
+
+input:valid {
+  border-left: 5px solid #28a745;
+}
+
+input:invalid {
+  border-left: 5px solid #dc3545;
+}
+
+.submit-btn {
+  background-color: #1d1d1d;
+  color: #ffff00;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.submit-btn:hover {
+  background-color: #ffff00;
+  color: #000000;
+}
