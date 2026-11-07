@@ -1,0 +1,123 @@
+/* 1. Box-Sizing Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eef1f5;
+  font-family: Verdana, sans-serif;
+}
+
+/* 2. Restyled Navbar using display: inline-block */
+.media-nav {
+  background-color: #1d1d1d;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 4px solid #ffff00;
+}
+
+.media-nav a {
+  display: inline-block;
+  color: #ffff00;
+  text-decoration: none;
+  padding: 6px 15px;
+  font-weight: bold;
+}
+
+/* 3. Background Image & Position (relative + absolute) */
+.media-banner {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  padding: 35px 25px;
+  margin-bottom: 20px;
+  background-image: url('https://placehold.co/1200x250/111111/222222?text=Junaid+Tech+Hardware');
+  background-size: cover;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.store-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ffff00;
+  color: #000000;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* 4. Box Model (width, height, margin, padding) + Overflow + Float */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 190px;
+  margin: 20px 0;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-left: 6px solid #ffff00;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(29, 29, 29, 0.1);
+}
+
+.float-img {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #ffff00;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(29, 29, 29, 0.18);
+}
+
+.info-content {
+  min-width: 0;
+  max-height: 135px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-color: #1d1d1d #eef1f5;
+  scrollbar-width: thin;
+}
+
+.info-content h4 {
+  margin-bottom: 10px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.info-content p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+@media (max-width: 575.98px) {
+  .info-box {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .float-img {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .info-content {
+    max-height: 180px;
+  }
+}
+
+.media-footer {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-size: 14px;
+}
