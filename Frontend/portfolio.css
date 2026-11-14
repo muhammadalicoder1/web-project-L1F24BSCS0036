@@ -1,0 +1,115 @@
+body {
+  background: linear-gradient(135deg, #f4f6f8 0%, #fffbea 100%);
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Matches the register page navigation */
+.reg-nav {
+  background: linear-gradient(90deg, #ffff00, #ffbb00);
+  padding: 12px;
+  text-align: center;
+}
+
+.reg-nav > a {
+  color: #1d1d1d;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 14px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.reg-nav > a:hover,
+.reg-nav > a:focus-visible,
+.reg-nav > a[href="portfolio.html"] {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+  border-left: 6px solid #fff200;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 29, 29, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(29, 29, 29, 0.07);
+  padding: 2rem;
+}
+
+main > p {
+  color: #555555;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Keyframes Animation */
+@keyframes fadeInSlide {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.grid-item {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeInSlide 0.6s ease forwards;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 14px 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* Media Queries (2 breakpoints) */
+@media (max-width: 768px) {
+  main { padding: 1.5rem; }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.site-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 14px;
+  border-top: 4px solid #fff200;
+}
+
+@media (max-width: 600px) {
+  .reg-nav > a {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+}
